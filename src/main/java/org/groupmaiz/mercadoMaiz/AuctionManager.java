@@ -60,7 +60,6 @@ public class AuctionManager implements AuctionService {
         Inventory inv = Bukkit.createInventory(null, 54, title);
         int slot = 0;
         for (Auction auc : auctions.values()) {
-            // TODO: filter by type (bando) if needed
             ItemStack item = createAuctionItem(auc);
             inv.setItem(slot++, item);
             if (slot >= inv.getSize()) break;
@@ -91,7 +90,6 @@ public class AuctionManager implements AuctionService {
             econ.withdrawPlayer(player, price);
             Player seller = Bukkit.getPlayerExact(auc.owner);
             if (seller != null) econ.depositPlayer(seller, price);
-            // Dar el ítem al comprador
             player.getInventory().addItem(new ItemStack(
                     Material.matchMaterial(auc.itemKey), 1
             ));
@@ -104,7 +102,6 @@ public class AuctionManager implements AuctionService {
 
     @Override
     public String getPlayerFaction(Player player) {
-        // Placeholder: todos neutrales
         return "Neutral";
     }
 
