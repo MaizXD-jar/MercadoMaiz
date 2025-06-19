@@ -75,7 +75,7 @@ public interface AuctionService {
 
     /**
      * Determina el bando del user
-     * @param playerName nombre del jugador
+     * @param player jugador
      * @return "Capitalista","Socialista" o "Neutral"
      */
     String getPlayerFaction(org.bukkit.entity.Player player);
