@@ -1,0 +1,19 @@
+name: MercadoMaiz
+version: '1.0'
+main: org.groupmaiz.mercadoMaiz.MercadoMaiz
+api-version: '1.20'
+load: STARTUP
+authors: [Deil]
+description: Plugin de mercados hecho por el Maiz
+depend: [Vault]
+softdepend: [MercadoMaiz-API]
+commands:
+  mercado:
+    description: Abre el mercado de tu bando o vende ítems
+    usage: /mercado [vender <precio> <cantidad>]
+    permission: mercadomaiz.use
+    permission-message: No tienes permiso para usar este comando.
+permissions:
+  mercadomaiz.use:
+    description: Permite usar el comando /mercado
+    default: true

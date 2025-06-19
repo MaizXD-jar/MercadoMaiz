@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="mercadomaiz:jar">
+    <output-path>$USER_HOME$/Descargas</output-path>
+    <root id="archive" name="mercadomaiz.jar">
+      <element id="module-output" name="mercadomaiz" />
+    </root>
+  </artifact>
+</component>
